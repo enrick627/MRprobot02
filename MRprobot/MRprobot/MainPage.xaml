@@ -7,7 +7,18 @@
         <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
             <Label Text="Welkom bij de app van MRProbot!" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
         </Frame>
-        <Button Text="&lt;" />
+        <Button Text="&lt;" 
+                VerticalOptions="Center"
+                HorizontalOptions="Center"/> 
+        <Button Text=">"
+                VerticalOptions="Center"
+                HorizontalOptions="Center"
+                AbsoluteLayout.LayoutBounds="10, 0, 5, 65"
+                 />
+        <Button Text="^"
+                VerticalOptions="Center"
+                HorizontalOptions="Center"
+                 />
         
     </StackLayout>
 
