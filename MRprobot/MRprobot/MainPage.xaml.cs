@@ -13,6 +13,8 @@ namespace MRprobot
         public MainPage()
         {
             InitializeComponent();
+            
         }
+        
     }
 }

@@ -10,9 +10,9 @@ using Xamarin.Forms.Xaml;
 namespace MRprobot
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Page1 : ContentPage
+    public partial class Arm : ContentPage
     {
-        public Page1()
+        public Arm()
         {
             InitializeComponent();
         }
