@@ -4,21 +4,21 @@
              x:Class="MRprobot.MainPage">
 
     <StackLayout>
-        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+        <Frame BackgroundColor="#ff2323" Padding="24" CornerRadius="0">
             <Label Text="Welkom bij de app van MRProbot!" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
         </Frame>
-        <Button Text="&lt;" 
-                VerticalOptions="Center"
-                HorizontalOptions="Center"/> 
-        <Button Text=">"
-                VerticalOptions="Center"
-                HorizontalOptions="Center"
+        <Button Text="Sturen" 
+                WidthRequest="200" HeightRequest="100"
+                VerticalOptions="CenterAndExpand"
+                HorizontalOptions="CenterAndExpand"
+                /> 
+        <Button Text="Arm"
+                WidthRequest="200" HeightRequest="100"
+                VerticalOptions="CenterAndExpand"
+                HorizontalOptions="CenterAndExpand"
                 AbsoluteLayout.LayoutBounds="10, 0, 5, 65"
                  />
-        <Button Text="^"
-                VerticalOptions="Center"
-                HorizontalOptions="Center"
-                 />
+        
         
     </StackLayout>
 
