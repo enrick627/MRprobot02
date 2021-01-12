@@ -16,5 +16,9 @@ namespace MRprobot
         {
             InitializeComponent();
         }
+        private async void NavigateButton_OnClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new MainPage());
+        }
     }
 }

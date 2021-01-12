@@ -20,7 +20,8 @@
                     AbsoluteLayout.LayoutBounds="20,70,100,25"/>
             
         </AbsoluteLayout>
-            <Button Text="Main Page" BackgroundColor="Blue" Clicked="NavigateButton_OnClicked">
+            <Button Text="&lt;" BackgroundColor="#ff2323" 
+                    Clicked="NavigateButton_OnClicked">
             </Button>
         </StackLayout>
         
