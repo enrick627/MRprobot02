@@ -4,8 +4,14 @@
              x:Class="MRprobot.Arm">
     <ContentPage.Content>
         <StackLayout>
+            
+            
+                
+            
             <Frame BackgroundColor="#ff2323" Padding="24" CornerRadius="0">
+                
                 <Label Text="Arm!" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+                
             </Frame>
         <AbsoluteLayout>
             <Button Text=""
@@ -14,6 +20,9 @@
                     AbsoluteLayout.LayoutBounds="20,70,100,25"/>
             
         </AbsoluteLayout>
+            <Button Text="Main Page" BackgroundColor="Blue" Clicked="NavigateButton_OnClicked">
+            </Button>
         </StackLayout>
+        
     </ContentPage.Content>
 </ContentPage>

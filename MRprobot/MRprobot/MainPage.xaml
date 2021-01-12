@@ -23,12 +23,11 @@
             <Button Text="&lt;-" 
                 WidthRequest="100" HeightRequest="50"
                 VerticalOptions="Center"
-                HorizontalOptions="Center"
-                AbsoluteLayout.LayoutBounds="20,70,100,25"
-                />
-            
-        </AbsoluteLayout>
+                HorizontalOptions="Center" AbsoluteLayout.LayoutBounds="100,0,0,100"
+                    Clicked="NavigateButton_OnClicked"
+                            />
 
+        </AbsoluteLayout>
     </StackLayout>
 
 </ContentPage>
