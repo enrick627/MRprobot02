@@ -11,23 +11,14 @@
                 WidthRequest="200" HeightRequest="100"
                 VerticalOptions="CenterAndExpand"
                 HorizontalOptions="CenterAndExpand"
-                
                 />
-        <Button Text="Arm"
+        <Button Text="Arm" 
                 WidthRequest="200" HeightRequest="100"
                 VerticalOptions="CenterAndExpand"
                 HorizontalOptions="CenterAndExpand"
-               
-                 />
-        <AbsoluteLayout>
-            <Button Text="&lt;-" 
-                WidthRequest="100" HeightRequest="50"
-                VerticalOptions="Center"
-                HorizontalOptions="Center" AbsoluteLayout.LayoutBounds="100,0,0,100"
                     Clicked="NavigateButton_OnClicked"
-                            />
+                    />
 
-        </AbsoluteLayout>
     </StackLayout>
 
 </ContentPage>

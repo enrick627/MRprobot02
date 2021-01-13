@@ -4,25 +4,19 @@
              x:Class="MRprobot.Arm">
     <ContentPage.Content>
         <StackLayout>
-            
-            
-                
-            
+
             <Frame BackgroundColor="#ff2323" Padding="24" CornerRadius="0">
-                
                 <Label Text="Arm!" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
-                
             </Frame>
         <AbsoluteLayout>
-            <Button Text=""
-                    BackgroundColor="#ff2323"
-                    TextColor="White" FontSize="12"
+            <Button Text="UP"
+                    FontSize="12"
+                    TextColor="White" 
+                    WidthRequest="50" HeightRequest="100"
                     AbsoluteLayout.LayoutBounds="20,70,100,25"/>
             
         </AbsoluteLayout>
-            <Button Text="&lt;" BackgroundColor="#ff2323" 
-                    Clicked="NavigateButton_OnClicked">
-            </Button>
+           
         </StackLayout>
         
     </ContentPage.Content>
