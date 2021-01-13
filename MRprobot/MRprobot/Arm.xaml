@@ -10,10 +10,10 @@
             </Frame>
         <AbsoluteLayout>
             <Button Text="UP"
-                    FontSize="12"
                     TextColor="White" 
-                    WidthRequest="50" HeightRequest="100"
-                    AbsoluteLayout.LayoutBounds="20,70,100,25"/>
+                    WidthRequest="100" HeightRequest="50"
+                    AbsoluteLayout.LayoutBounds="20,70,100,25"
+                    IsVisible="true"/>
             
         </AbsoluteLayout>
            

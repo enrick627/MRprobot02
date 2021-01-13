@@ -21,7 +21,7 @@ namespace MRprobot
         }
         private async void NavigateButton_OnWielenClicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new Page1());
+            await Navigation.PushAsync(new Wielen());
         }
     }
 }

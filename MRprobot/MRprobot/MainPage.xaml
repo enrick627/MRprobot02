@@ -11,6 +11,7 @@
                 WidthRequest="200" HeightRequest="100"
                 VerticalOptions="CenterAndExpand"
                 HorizontalOptions="CenterAndExpand"
+                Clicked="NavigateButton_OnWielenClicked"
                 />
         <Button Text="Arm" 
                 WidthRequest="200" HeightRequest="100"
