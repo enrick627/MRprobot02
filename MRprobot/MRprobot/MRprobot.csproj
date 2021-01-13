@@ -19,6 +19,9 @@
     <Compile Update="Arm.xaml.cs">
       <DependentUpon>Arm.xaml</DependentUpon>
     </Compile>
+    <Compile Update="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
 
   <ItemGroup>
