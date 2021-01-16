@@ -23,6 +23,19 @@ namespace MRprobot
         {
             await Navigation.PushAsync(new Wielen());
         }
-
+        private async void Bleuthootconnection(string pin)
+        {
+            try
+            {
+                var bluetoothDeviceReceiver = new BluetoothDiscoveryReceiver(pin);
+                var intentFilter = new Android.Content.IntentFilter(Android.Bluetooth.BluetoothDevice.ActionPairingRequest);
+                intentFilter.Priority = (int)Android.Content.IntentFilterPriority.HighPriority;
+                var intent = MainActivity.Instance.RegisterReceiver(bluetoothDeviceReceiver, intentFilter);
+            }
+            catch
+            {
+                // log error
+            }
+        }
     }
 }
