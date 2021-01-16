@@ -19,7 +19,7 @@
                 HorizontalOptions="CenterAndExpand"
                     Clicked="NavigateButton_OnClicked"
                     />
-
+        <Button Text="Bleuthoot" />
     </StackLayout>
 
 </ContentPage>

@@ -5,7 +5,7 @@
     <ContentPage.Content>
         <StackLayout>
             <Frame BackgroundColor="#ff2323" Padding="24" CornerRadius="0">
-                <Label Text="Wielen" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+                <Label Text="Sturen" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
             </Frame>
             <AbsoluteLayout>
                 <Button Text="Left" 
