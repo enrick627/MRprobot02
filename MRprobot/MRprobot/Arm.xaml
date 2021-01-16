@@ -8,14 +8,14 @@
             <Frame BackgroundColor="#ff2323" Padding="24" CornerRadius="0">
                 <Label Text="Arm!" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
             </Frame>
-        <AbsoluteLayout>
-            <Button Text="UP"
-                    TextColor="White" 
-                    WidthRequest="100" HeightRequest="50"
-                    AbsoluteLayout.LayoutBounds="20,70,100,25"
-                    IsVisible="true"/>
-            
-        </AbsoluteLayout>
+            <AbsoluteLayout>
+
+                
+                <Button Text="down" 
+                AbsoluteLayout.LayoutBounds="100,250,200,100"/>
+                <Button Text="UP" 
+                 AbsoluteLayout.LayoutBounds="100, 150, 200, 100"/>
+            </AbsoluteLayout>
            
         </StackLayout>
         

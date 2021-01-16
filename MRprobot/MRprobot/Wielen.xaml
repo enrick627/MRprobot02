@@ -7,6 +7,16 @@
             <Frame BackgroundColor="#ff2323" Padding="24" CornerRadius="0">
                 <Label Text="Wielen" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
             </Frame>
+            <AbsoluteLayout>
+                <Button Text="Left" 
+                        AbsoluteLayout.LayoutBounds="50,150, 150, 100 "/>
+                <Button Text="Front" 
+                        AbsoluteLayout.LayoutBounds="125,50, 150, 100 "/>
+                <Button Text="Right" 
+                        AbsoluteLayout.LayoutBounds="200,150, 150, 100 "/>
+                <Button Text="Down" 
+                        AbsoluteLayout.LayoutBounds="125,250, 150, 100 "/>
+            </AbsoluteLayout>
             
         </StackLayout>
     </ContentPage.Content>
