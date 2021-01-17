@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Android.Bluetooth;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -23,19 +24,12 @@ namespace MRprobot
         {
             await Navigation.PushAsync(new Wielen());
         }
+        Button btConnect = FindViewById<Button>(Resource.Id.connect);
         private async void Bleuthootconnection(string pin)
         {
-            try
-            {
-                var bluetoothDeviceReceiver = new BluetoothDiscoveryReceiver(pin);
-                var intentFilter = new Android.Content.IntentFilter(Android.Bluetooth.BluetoothDevice.ActionPairingRequest);
-                intentFilter.Priority = (int)Android.Content.IntentFilterPriority.HighPriority;
-                var intent = MainActivity.Instance.RegisterReceiver(bluetoothDeviceReceiver, intentFilter);
-            }
-            catch
-            {
-                // log error
-            }
+            
+
+            
         }
     }
 }
