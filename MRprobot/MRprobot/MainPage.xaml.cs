@@ -24,7 +24,7 @@ namespace MRprobot
         {
             await Navigation.PushAsync(new Wielen());
         }
-        Button btConnect = FindViewById<Button>(Resource.Id.connect);
+        
         private async void Bleuthootconnection(string pin)
         {
             
