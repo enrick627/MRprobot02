@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 
 using Android.App;
+using Android.Bluetooth;
 using Android.Content;
 using Android.OS;
 using Android.Runtime;
@@ -24,7 +25,7 @@ namespace MRprobot.Droid
         public class BluetoothDiscoveryReceiver : BroadcastReceiver
         {
             private readonly string _pin;
-
+            
             public BluetoothDiscoveryReceiver()
             {
             }

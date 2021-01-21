@@ -19,6 +19,12 @@
                 HorizontalOptions="CenterAndExpand"
                     Clicked="NavigateButton_OnClicked"
                     />
+        <Button Text="Bleutooth" 
+                WidthRequest="200" HeightRequest="100"
+                VerticalOptions="CenterAndExpand"
+                HorizontalOptions="CenterAndExpand"
+                    Clicked="NavigateButton_OnClicked"
+                    />
         <Button Text="Bleuthoot" />
     </StackLayout>
 
