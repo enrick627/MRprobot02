@@ -18,11 +18,13 @@ namespace MRprobot.Droid
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
-            // Set our view from the "main" layout resource
+            
             
 
-            // Get our button from the layout resource,
-            // and attach an event to it
+            
+            //Haal de button uit de layout bron
+            //verbind hieraan een event
+           
             Button buttonConnect = FindViewById<Button>(Resource.Id.button1);
             Button buttonDisconnect = FindViewById<Button>(Resource.Id.button2);
 
@@ -68,7 +70,7 @@ namespace MRprobot.Droid
                     alert.SetMessage("Please go to settings and connect with the bluetooth module at first.");
                     alert.SetButton("OK", (c, ev) =>
                     {
-                        // Ok button click task: alert goes away  
+                        // Ok button click taak: alert verdwijnt!
                     });
                     alert.Show();
                 }
@@ -79,7 +81,7 @@ namespace MRprobot.Droid
                 {
                     myConnection.thisSocket.Connect();
 
-                    connected.Text = "Connected to the Arduino!";
+                    buttonConnect.Text = "Connected to the Arduino!";
                     buttonDisconnect.Enabled = true;
                     buttonConnect.Enabled = false;
 
@@ -105,7 +107,7 @@ namespace MRprobot.Droid
                     myConnection = new BluetoothConnection();
                     _socket = null;
 
-                    connected.Text = "Not connected to the Arduino!";
+                    buttonConnect.Text = "Not connected to the Arduino!";
                 }
                 catch { }
             };
@@ -120,7 +122,8 @@ namespace MRprobot.Droid
             public void getAdapter() { this.thisAdapter = BluetoothAdapter.DefaultAdapter; }
 
 
-            //change the bd.name according to the name of your bluetooth module
+            
+            //LET OP!!!!!!! bd.name aanpassen aan de naam van de module bij ons project is dit hc-05 dus dit is momenteel correct.
             public void getDevice() { this.thisDevice = (from bd in this.thisAdapter.BondedDevices where bd.Name == "HC-05" select bd).FirstOrDefault(); }
 
             public BluetoothAdapter thisAdapter { get; set; }
