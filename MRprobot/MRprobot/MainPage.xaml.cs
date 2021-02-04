@@ -25,11 +25,6 @@ namespace MRprobot
             await Navigation.PushAsync(new Wielen());
         }
         
-        private async void Bleuthootconnection(string pin)
-        {
-            
-
-            
-        }
+        
     }
 }
