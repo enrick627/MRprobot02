@@ -58,7 +58,7 @@ namespace MRprobot.Droid
 
                 try
                 { _socket = myConnection.thisDevice.CreateRfcommSocketToServiceRecord(Java.Util.UUID.FromString("00001101-0000-1000-8000-00805f9b34fb")); } //the UUID of HC-05 and HC-06 is the same
-                catch (Exception ex)
+                catch (Exception)
                 {
                     AlertDialog.Builder dialog = new AlertDialog.Builder(this);
                     AlertDialog alert = dialog.Create();

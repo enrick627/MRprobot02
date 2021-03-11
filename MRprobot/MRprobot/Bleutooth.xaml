@@ -4,10 +4,11 @@
              x:Class="MRprobot.Bleutooth">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
+            <Label Text="Bleuthoot"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
             
         </StackLayout>
+        
     </ContentPage.Content>
 </ContentPage>
