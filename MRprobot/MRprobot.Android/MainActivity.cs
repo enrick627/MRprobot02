@@ -18,10 +18,6 @@ namespace MRprobot.Droid
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
-            
-            
-
-            
             //Haal de button uit de layout bron
             //verbind hieraan een event
            
