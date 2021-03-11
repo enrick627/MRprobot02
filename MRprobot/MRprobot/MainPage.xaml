@@ -25,9 +25,8 @@
                 VerticalOptions="CenterAndExpand"
                 HorizontalOptions="CenterAndExpand"
                     Clicked="NavigateButton_OnClicked"
-                AbsoluteLayout.LayoutBounds="100,250,200,100"
                     />
-        <Button Text="Bleuthoot" />
+        
     </StackLayout>
 
 </ContentPage>
