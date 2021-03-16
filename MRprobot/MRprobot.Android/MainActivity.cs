@@ -9,6 +9,7 @@ using Android.Bluetooth;
 using System.Linq;
 using static Android.Graphics.ColorSpace;
 using System.Threading;
+using Android.Content.PM;
 
 namespace MRprobot.Droid
 {
@@ -37,7 +38,7 @@ namespace MRprobot.Droid
 
             BleuthootConnect.Click += delegate
             {
-
+                //deze code heb ik van de volgende website:https://www.instructables.com/3-LED-Backlight-Xamarin-and-Arduino-With-HC05/
                 listenThread.Start();
                 myConnection = new BluetoothConnection();
                 myConnection.getAdapter();
@@ -54,24 +55,34 @@ namespace MRprobot.Droid
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine("connect to device", ex);
+                    
                 }
                 myConnection.thisAdapter.CancelDiscovery();
 
-                try
-                { _socket = myConnection.thisDevice.CreateRfcommSocketToServiceRecord(Java.Util.UUID.FromString("00001101-0000-1000-8000-00805f9b34fb")); } //the UUID of HC-05 and HC-06 is the same
-                catch (Exception)
-                {
-                    AlertDialog.Builder dialog = new AlertDialog.Builder(this);
-                    AlertDialog alert = dialog.Create();
-                    alert.SetTitle("Error");
-                    alert.SetMessage("Please go to settings and connect with the bluetooth module at first.");
-                    alert.SetButton("OK", (c, ev) =>
+                _socket = myConnection.thisDevice.CreateRfcommSocketToServiceRecord(Java.Util.UUID.FromString("00001101-0000-1000-8000-00805f9b34fb"));
+
+                myConnection.thisSocket = _socket;
+
+                //   System.Threading.Thread.Sleep(500);
+                try { 
+                    myConnection.thisSocket.Connect();
+                    //deze kan later nog worden gemaakt voorlopig geeft dit nog een error.
+                    //Connected.Text = "Verbonden!";
+                    BleuthootConnect.Enabled = true;
+                    BleuthootDisconnect.Enabled = false;
+
+                    if (listenThread.IsAlive == false)
                     {
-                        // Ok button click taak: alert verdwijnt!
-                    });
-                    alert.Show();
+                        listenThread.Start();
+                    }
+                    
+
                 }
+                catch (Exception CloseEX)
+                {
+
+                }
+
 
                 myConnection.thisSocket = _socket;
 
@@ -79,21 +90,25 @@ namespace MRprobot.Droid
                 {
                     myConnection.thisSocket.Connect();
 
-                    buttonConnect.Text = "Connected to the Arduino!";
-                    buttonDisconnect.Enabled = true;
-                    buttonConnect.Enabled = false;
-
+                    BleuthootConnect.Text = "verbonden met de arduino!!! kusjes Enrick xxx";
+                    BleuthootDisconnect.Enabled = true;
+                    BleuthootConnect.Enabled = false;
+                    if (listenThread.IsAlive == false)
+                    {
+                        listenThread.Start();
+                    }
                 }
                 catch (Exception ex)
                 { Console.WriteLine("connect to device", ex); }
             };
 
-            buttonDisconnect.Click += delegate
+            BleuthootDisconnect.Click += delegate
             {
 
                 try
                 {
-                    buttonConnect.Enabled = true;
+                    //is de connectie aan ja of nee?
+                    BleuthootConnect.Enabled = true;
 
                     myConnection.thisDevice.Dispose();
 
