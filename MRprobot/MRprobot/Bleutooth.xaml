@@ -7,7 +7,11 @@
             <Label Text="Bleuthoot"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
-            
+            <Button Text="Connect" 
+                AbsoluteLayout.LayoutBounds="100,250,200,100"/>
+            <Button Text="Disconnect" 
+                 AbsoluteLayout.LayoutBounds="100, 150, 200, 100"/>
+
         </StackLayout>
         
     </ContentPage.Content>
