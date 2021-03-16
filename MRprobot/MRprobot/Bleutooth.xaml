@@ -6,11 +6,14 @@
         <StackLayout>
             <Label Text="Bleuthoot"
                 VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+                HorizontalOptions="CenterAndExpand" 
+               />
             <Button Text="Connect" 
-                AbsoluteLayout.LayoutBounds="100,250,200,100"/>
+                AbsoluteLayout.LayoutBounds="100,250,200,100"
+                Clicked="BleuthootConnect"/>
             <Button Text="Disconnect" 
-                 AbsoluteLayout.LayoutBounds="100, 150, 200, 100"/>
+                 AbsoluteLayout.LayoutBounds="100, 150, 200, 100"
+                    ClassId="BleuthootDisconnect"/>
 
         </StackLayout>
         

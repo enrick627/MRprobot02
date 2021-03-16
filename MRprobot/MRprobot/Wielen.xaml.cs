@@ -22,10 +22,7 @@ namespace MRprobot
         }
         private async void NavigateButton_OnWielenClicked(object sender, CheckedChangedEventArgs e)
         {
-            if (e.IsChecked)
-            {
-
-            }
+            
         }
     }
 }

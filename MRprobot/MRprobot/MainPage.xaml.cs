@@ -24,7 +24,10 @@ namespace MRprobot
         {
             await Navigation.PushAsync(new Wielen());
         }
-        
+        private async void BleuthootConnect(object sender, EventArgs e)
+        {
+            
+        }
         
     }
 }

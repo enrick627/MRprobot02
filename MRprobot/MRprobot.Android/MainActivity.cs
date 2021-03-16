@@ -1,6 +1,6 @@
 ﻿using System;
 using Android.App;
-using Android.Content.PM;
+using Android.Content;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
@@ -8,6 +8,7 @@ using Android.OS;
 using Android.Bluetooth;
 using System.Linq;
 using static Android.Graphics.ColorSpace;
+using System.Threading;
 
 namespace MRprobot.Droid
 {
@@ -15,28 +16,29 @@ namespace MRprobot.Droid
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
     {
         BluetoothConnection myConnection = new BluetoothConnection();
+        private ThreadStart listener;
+
         protected override void OnCreate(Bundle bundle)
         {
+            
             base.OnCreate(bundle);
             //Haal de button uit de layout bron
             //verbind hieraan een event
-           
-            Button buttonConnect = FindViewById<Button>(Resource.Id.button1);
-            Button buttonDisconnect = FindViewById<Button>(Resource.Id.button2);
-
             
-
+            Button BleuthootConnect = FindViewById<Button>(Resource.Id.button1);
+            Button BleuthootDisconnect = FindViewById<Button>(Resource.Id.button2);
 
 
             BluetoothSocket _socket = null;
 
 
+            System.Threading.Thread listenThread = new System.Threading.Thread(listener);
+            listenThread.Abort();
 
-
-            buttonConnect.Click += delegate
+            BleuthootConnect.Click += delegate
             {
 
-
+                listenThread.Start();
                 myConnection = new BluetoothConnection();
                 myConnection.getAdapter();
                 myConnection.thisAdapter.StartDiscovery();
@@ -110,8 +112,9 @@ namespace MRprobot.Droid
 
 
 
-            
+           
         }
+        
         public class BluetoothConnection
         {
 
