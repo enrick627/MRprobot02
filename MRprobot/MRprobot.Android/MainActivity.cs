@@ -111,8 +111,8 @@ namespace MRprobot.Droid
                     BleuthootConnect.Enabled = true;
 
                     myConnection.thisDevice.Dispose();
-
-                    myConnection.thisSocket.OutputStream.WriteByte(200);
+                    //dit moet 187 zijn want dit is de nummer om te verbinden met de bleuthoot module HC05.
+                    myConnection.thisSocket.OutputStream.WriteByte(187);
                     myConnection.thisSocket.OutputStream.Close();
 
                     myConnection.thisSocket.Close();
@@ -120,7 +120,7 @@ namespace MRprobot.Droid
                     myConnection = new BluetoothConnection();
                     _socket = null;
 
-                    buttonConnect.Text = "Not connected to the Arduino!";
+                    BleuthootConnect.Text = "Not connected to the Arduino!";
                 }
                 catch { }
             };
