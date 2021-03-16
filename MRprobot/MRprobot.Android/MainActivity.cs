@@ -21,14 +21,14 @@ namespace MRprobot.Droid
 
         protected override void OnCreate(Bundle bundle)
         {
-            
+
             base.OnCreate(bundle);
             //Haal de button uit de layout bron
             //verbind hieraan een event
-            
+
             Button BleuthootConnect = FindViewById<Button>(Resource.Id.button1);
             Button BleuthootDisconnect = FindViewById<Button>(Resource.Id.button2);
-
+            Button ButtonVooruit = FindViewById<Button>(Resource.Id.button3);
 
             BluetoothSocket _socket = null;
 
@@ -55,7 +55,7 @@ namespace MRprobot.Droid
                 }
                 catch (Exception ex)
                 {
-                    
+
                 }
                 myConnection.thisAdapter.CancelDiscovery();
 
@@ -64,7 +64,7 @@ namespace MRprobot.Droid
                 myConnection.thisSocket = _socket;
 
                 //   System.Threading.Thread.Sleep(500);
-                try { 
+                try {
                     myConnection.thisSocket.Connect();
                     //deze kan later nog worden gemaakt voorlopig geeft dit nog een error.
                     //Connected.Text = "Verbonden!";
@@ -75,7 +75,7 @@ namespace MRprobot.Droid
                     {
                         listenThread.Start();
                     }
-                    
+
 
                 }
                 catch (Exception CloseEX)
@@ -126,8 +126,23 @@ namespace MRprobot.Droid
             };
 
 
+            ButtonVooruit.Click += delegate
+            {
+                try
+                {
+                    //De nummer die moet worden doorgegeven voor vooruit de gaan is 4.
+                    myConnection.thisSocket.OutputStream.WriteByte(4);
+                    myConnection.thisSocket.OutputStream.Close();
+                }
+                catch (Exception ex)
+                {
 
-           
+
+                }
+
+            };
+
+
         }
         
         public class BluetoothConnection
