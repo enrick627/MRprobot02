@@ -29,6 +29,7 @@ namespace MRprobot.Droid
             Button BleuthootConnect = FindViewById<Button>(Resource.Id.button1);
             Button BleuthootDisconnect = FindViewById<Button>(Resource.Id.button2);
             Button ButtonVooruit = FindViewById<Button>(Resource.Id.button3);
+            Button ButtonAchteruit = FindViewById<Button>(Resource.Id.button4);
 
             BluetoothSocket _socket = null;
 
@@ -137,7 +138,7 @@ namespace MRprobot.Droid
                 catch (Exception ex)
                 {
 
-
+                    Console.WriteLine(ex.Message);
                 }
 
             };
