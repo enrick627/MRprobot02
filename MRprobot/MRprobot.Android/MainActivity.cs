@@ -11,6 +11,7 @@ using static Android.Graphics.ColorSpace;
 using System.Threading;
 using Android.Content.PM;
 
+
 namespace MRprobot.Droid
 {
     [Activity(Label = "MRprobot", Icon = "@mipmap/icon", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation | ConfigChanges.UiMode | ConfigChanges.ScreenLayout | ConfigChanges.SmallestScreenSize)]
@@ -23,14 +24,17 @@ namespace MRprobot.Droid
         {
 
             base.OnCreate(bundle);
+            
             //Haal de button uit de layout bron
             //verbind hieraan een event
 
             Button BleuthootConnect = FindViewById<Button>(Resource.Id.button1);
             Button BleuthootDisconnect = FindViewById<Button>(Resource.Id.button2);
             Button ButtonVooruit = FindViewById<Button>(Resource.Id.button3);
-            Button ButtonAchteruit = FindViewById<Button>(Resource.Id.);
-            
+            Button ButtonAchteruit = FindViewById<Button>(Resource.Id.buttonPanel);
+            new MainPage = MainPage.
+
+            SetContentView(Resource.Layout.Main);
             BluetoothSocket _socket = null;
 
 

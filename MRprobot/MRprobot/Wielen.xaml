@@ -18,7 +18,7 @@
                         AbsoluteLayout.LayoutBounds="200,150, 150, 100 "/>
                 <Button Text="Down" 
                         AbsoluteLayout.LayoutBounds="125,250, 150, 100 "
-                         x:Name="@+id/Button4"/>
+                        ClassId="buttonNRBeneden"/>
             </AbsoluteLayout>
             
         </StackLayout>
