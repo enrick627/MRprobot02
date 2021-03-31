@@ -29,8 +29,8 @@ namespace MRprobot.Droid
             Button BleuthootConnect = FindViewById<Button>(Resource.Id.button1);
             Button BleuthootDisconnect = FindViewById<Button>(Resource.Id.button2);
             Button ButtonVooruit = FindViewById<Button>(Resource.Id.button3);
-            Button ButtonAchteruit = FindViewById<Button>(Resource.Id.button4);
-
+            Button ButtonAchteruit = FindViewById<Button>(Resource.Id.);
+            
             BluetoothSocket _socket = null;
 
 
