@@ -9,6 +9,7 @@ using System.IO;
 using Java.Util;
 using Android.Bluetooth;
 using System.Threading.Tasks;
+using static Android.Net.Sip.SipSession;
 
 namespace MRprobot.Droid
 {
@@ -32,18 +33,18 @@ namespace MRprobot.Droid
             //Haal de button uit de layout bron
             //verbind hieraan een event
 
-            Button BleuthootConnect = FindViewById<Button>(Resource.Id.);
+            Button BleuthootConnect = FindViewById<Button>(Resource.Id.butt);
             Button BleuthootDisconnect = FindViewById<Button>(Resource.Id.button2);
             Button ButtonVooruit = FindViewById<Button>(Resource.Id.button3);
             //Button ButtonAchteruit = FindViewById<Button>(Resource.Id.button4);
             //Button ButtonRechts = FindViewById<Button>(Resource.Id.button5);
-            new MainPage = MainPage.
+           
 
             
             BluetoothSocket _socket = null;
 
 
-            System.Threading.Thread listenThread = new System.Threading.Thread(listener);
+            System.Threading.Thread listenThread = new System.Threading.Thread(Listener);
             listenThread.Abort();
 
             BleuthootConnect.Click += delegate
