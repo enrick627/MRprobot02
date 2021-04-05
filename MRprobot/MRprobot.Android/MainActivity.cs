@@ -5,36 +5,41 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
+using System.IO;
+using Java.Util;
 using Android.Bluetooth;
-using System.Linq;
-using static Android.Graphics.ColorSpace;
-using System.Threading;
-using Android.Content.PM;
-
+using System.Threading.Tasks;
 
 namespace MRprobot.Droid
 {
     [Activity(Label = "MRprobot", Icon = "@mipmap/icon", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation | ConfigChanges.UiMode | ConfigChanges.ScreenLayout | ConfigChanges.SmallestScreenSize)]
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
     {
+        //code van de volgende website gehaald http://alejandroruizvarela.blogspot.com/2014/01/bluetooth-arduino-xamarinandroid.html
         BluetoothConnection myConnection = new BluetoothConnection();
-        private ThreadStart listener;
-
+        ToggleButton tgConnect;
+        TextView Result;
+        private Java.Lang.String dataToSend;
+        private BluetoothAdapter mBluetoothAdapter = null;
+        private BluetoothSocket btSocket = null;
+        private Stream outStream = null;
+        private Stream inStream = null;
         protected override void OnCreate(Bundle bundle)
         {
 
             base.OnCreate(bundle);
-            
+            SetContentView(Resource.Layout.Main);
             //Haal de button uit de layout bron
             //verbind hieraan een event
 
-            Button BleuthootConnect = FindViewById<Button>(Resource.Id.button1);
+            Button BleuthootConnect = FindViewById<Button>(Resource.Id.);
             Button BleuthootDisconnect = FindViewById<Button>(Resource.Id.button2);
             Button ButtonVooruit = FindViewById<Button>(Resource.Id.button3);
-            Button ButtonAchteruit = FindViewById<Button>(Resource.Id.buttonPanel);
+            //Button ButtonAchteruit = FindViewById<Button>(Resource.Id.button4);
+            //Button ButtonRechts = FindViewById<Button>(Resource.Id.button5);
             new MainPage = MainPage.
 
-            SetContentView(Resource.Layout.Main);
+            
             BluetoothSocket _socket = null;
 
 
