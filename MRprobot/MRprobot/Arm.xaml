@@ -13,6 +13,7 @@
                 
                 <Button Text="down" 
                 AbsoluteLayout.LayoutBounds="100,250,200,100"
+                AutomationId="ButtonOmhoog"
                 />
                 <Button Text="UP" 
                  AbsoluteLayout.LayoutBounds="100, 150, 200, 100"

@@ -27,14 +27,15 @@ namespace MRprobot.Droid
         private Stream inStream = null;
         protected override void OnCreate(Bundle bundle)
         {
-            MainPage mainpage = new MainPage();
-            mainpage = b
+            
+  
             base.OnCreate(bundle);
-            SetContentView(Resource.Layout.Main);
+            Xamarin.Forms.Forms.Init(this, bundle);
+            
             //Haal de button uit de layout bron
             //verbind hieraan een event
 
-            Button BleuthootConnect = FindViewById<Button>(Resource.Id.butt);
+            Button BleuthootConnect = FindViewById<Button>(Resource.Id.);
             Button BleuthootDisconnect = FindViewById<Button>(Resource.Id.);
             Button ButtonVooruit = FindViewById<Button>(Resource.Id.button3);
             //Button ButtonAchteruit = FindViewById<Button>(Resource.Id.button4);
