@@ -27,14 +27,15 @@ namespace MRprobot.Droid
         private Stream inStream = null;
         protected override void OnCreate(Bundle bundle)
         {
-
+            MainPage mainpage = new MainPage();
+            mainpage = b
             base.OnCreate(bundle);
             SetContentView(Resource.Layout.Main);
             //Haal de button uit de layout bron
             //verbind hieraan een event
 
             Button BleuthootConnect = FindViewById<Button>(Resource.Id.butt);
-            Button BleuthootDisconnect = FindViewById<Button>(Resource.Id.button2);
+            Button BleuthootDisconnect = FindViewById<Button>(Resource.Id.);
             Button ButtonVooruit = FindViewById<Button>(Resource.Id.button3);
             //Button ButtonAchteruit = FindViewById<Button>(Resource.Id.button4);
             //Button ButtonRechts = FindViewById<Button>(Resource.Id.button5);

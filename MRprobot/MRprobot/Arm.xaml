@@ -13,9 +13,10 @@
                 
                 <Button Text="down" 
                 AbsoluteLayout.LayoutBounds="100,250,200,100"
-                x:Uid="@ + id / toggleButton1"       />
+                />
                 <Button Text="UP" 
-                 AbsoluteLayout.LayoutBounds="100, 150, 200, 100"/>
+                 AbsoluteLayout.LayoutBounds="100, 150, 200, 100"
+                 Clicked="ArmNaarBovenClick"/>
             </AbsoluteLayout>
            
         </StackLayout>
