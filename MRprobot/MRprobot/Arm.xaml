@@ -11,9 +11,10 @@
             <AbsoluteLayout>
 
                 
-                <Button Text="down" 
+                <Button Command="Button4" Text="down" 
                 AbsoluteLayout.LayoutBounds="100,250,200,100"
                 AutomationId="ButtonOmhoog"
+                 ClassId="ButtonUp"
                 />
                 <Button Text="UP" 
                  AbsoluteLayout.LayoutBounds="100, 150, 200, 100"

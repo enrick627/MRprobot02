@@ -10,6 +10,7 @@ using Java.Util;
 using Android.Bluetooth;
 using System.Threading.Tasks;
 using static Android.Net.Sip.SipSession;
+using System.Linq;
 
 namespace MRprobot.Droid
 {
@@ -31,13 +32,15 @@ namespace MRprobot.Droid
   
             base.OnCreate(bundle);
             Xamarin.Forms.Forms.Init(this, bundle);
-            
+
             //Haal de button uit de layout bron
             //verbind hieraan een event
+            Arm ButtonUP = new Arm();
 
+            
             Button BleuthootConnect = FindViewById<Button>(Resource.Id.);
             Button BleuthootDisconnect = FindViewById<Button>(Resource.Id.);
-            Button ButtonVooruit = FindViewById<Button>(Resource.Id.button3);
+            Button ButtonVooruit = FindViewById<Button>(Arm.ClassIdProperty);
             //Button ButtonAchteruit = FindViewById<Button>(Resource.Id.button4);
             //Button ButtonRechts = FindViewById<Button>(Resource.Id.button5);
            
@@ -46,7 +49,7 @@ namespace MRprobot.Droid
             BluetoothSocket _socket = null;
 
 
-            System.Threading.Thread listenThread = new System.Threading.Thread(Listener);
+            System.Threading.Thread listenThread = new System.Threading.Thread(listener);
             listenThread.Abort();
 
             BleuthootConnect.Click += delegate
