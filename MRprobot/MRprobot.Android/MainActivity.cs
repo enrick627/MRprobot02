@@ -12,6 +12,9 @@ using System.Threading.Tasks;
 using static Android.Net.Sip.SipSession;
 using System.Linq;
 using Android.Content.PM;
+using static MRprobot.MainPage;
+using Xamarin.Forms;
+using Button = Android.Widget.Button;
 
 namespace MRprobot.Droid
 {
@@ -27,34 +30,39 @@ namespace MRprobot.Droid
         private BluetoothSocket btSocket = null;
         private Stream outStream = null;
         private Stream inStream = null;
+        public object GetLogicFromAndroidProject()
+        {
+            throw new NotImplementedException(); // here write your logic 
+        }
         protected override void OnCreate(Bundle bundle)
         {
-            
-  
+
+            var obj = DependencyService.Get<PortableInterface>().GetLogicFromAndroidProject();
             base.OnCreate(bundle);
             Xamarin.Forms.Forms.Init(this, bundle);
-
+            
             //Haal de button uit de layout bron
             //verbind hieraan een event
-            Arm ButtonUP = new Arm();
-
+            Arm ButtonUp = new Arm();
             
-            Button BleuthootConnect = FindViewById<Button>(Resource.Id.);
-            Button BleuthootDisconnect = FindViewById<Button>(Arm.ClassIdProperty(ButtonUP));
-            Button ButtonOmhoog = FindViewById<Button>(Arm.ClassIdProperty(ButtonUP));
+
+            Button Bleuthootconnect = FindViewById<Button>(Bleutooth.ClassIdProperty(Bleuthootconnect));
+            Button BleuthootDisconnect = FindViewById<Button>(;
+            Button ButtonOmhoog = FindViewById<Button>(Arm.ClassIdProperty(ButtonUp));
             Button ButtonVooruit = FindViewById<Button>(Wielen.ClassIdProperty(ButtonFront));
-            //Button ButtonAchteruit = FindViewById<Button>(Resource.Id.button4);
-            //Button ButtonRechts = FindViewById<Button>(Resource.Id.button5);
+            Button ButtonAchteruit = FindViewById<Button>(Resource.Id.button4);
+            Button ButtonRechts = FindViewById<Button>(Resource.Id.button5);
+            Button ButtonLinks = FindViewById<Button>(Resource.Id.buttonPanel);
            
 
             
             BluetoothSocket _socket = null;
 
 
-            System.Threading.Thread listenThread = new System.Threading.Thread(listener);
+            System.Threading.Thread listenThread = new System.Threading.Thread(Listener);
             listenThread.Abort();
 
-            BleuthootConnect.Click += delegate
+            Bleuthootconnect.Click += delegate
             {
                 //deze code heb ik van de volgende website:https://www.instructables.com/3-LED-Backlight-Xamarin-and-Arduino-With-HC05/
                 listenThread.Start();
@@ -108,9 +116,9 @@ namespace MRprobot.Droid
                 {
                     myConnection.thisSocket.Connect();
 
-                    BleuthootConnect.Text = "verbonden met de arduino!!! kusjes Enrick xxx";
+                    Bleuthootconnect.Text = "verbonden met de arduino!!! kusjes Enrick xxx";
                     BleuthootDisconnect.Enabled = true;
-                    BleuthootConnect.Enabled = false;
+                    Bleuthootconnect.Enabled = false;
                     if (listenThread.IsAlive == false)
                     {
                         listenThread.Start();
@@ -126,7 +134,7 @@ namespace MRprobot.Droid
                 try
                 {
                     //is de connectie aan ja of nee?
-                    BleuthootConnect.Enabled = true;
+                    Bleuthootconnect.Enabled = true;
 
                     myConnection.thisDevice.Dispose();
                     //dit moet 187 zijn want dit is de nummer om te verbinden met de bleuthoot module HC05.
@@ -138,7 +146,7 @@ namespace MRprobot.Droid
                     myConnection = new BluetoothConnection();
                     _socket = null;
 
-                    BleuthootConnect.Text = "Not connected to the Arduino!";
+                    Bleuthootconnect.Text = "Not connected to the Arduino!";
                 }
                 catch { }
             };
@@ -159,8 +167,51 @@ namespace MRprobot.Droid
                 }
 
             };
+            ButtonAchteruit.Click += delegate
+            {
+                try
+                {
+                    //bij het nummer 3 wordt het commando achteruit rijden geactiveerd
+                    myConnection.thisSocket.OutputStream.WriteByte(3);
+                    myConnection.thisSocket.OutputStream.Close();
+                }
+                catch (Exception)
+                {
 
+                    throw;
+                }
+            };
+            ButtonLinks.Click += delegate
+            {
+                try
+                {
+                    //bij het nummer 1 wordt het commando links rijden geactiveerd
+                    myConnection.thisSocket.OutputStream.WriteByte(1);
+                    myConnection.thisSocket.OutputStream.Close();
+                }
+                catch (Exception)
+                {
 
+                    throw;
+                }
+            };
+
+            ButtonOmhoog.Click += delegate
+            {
+                try
+                {
+                    //bij deze 3 commando's gaat de arm helemaal naar boven. 
+                    myConnection.thisSocket.OutputStream.WriteByte(8);
+                    myConnection.thisSocket.OutputStream.WriteByte(10);
+                    myConnection.thisSocket.OutputStream.WriteByte(12);
+                    myConnection.thisSocket.OutputStream.Close();
+                }
+                catch (Exception)
+                {
+
+                    throw;
+                }
+            };
         }
         
         public class BluetoothConnection

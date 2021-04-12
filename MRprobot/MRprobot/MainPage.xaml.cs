@@ -11,10 +11,15 @@ namespace MRprobot
 {
     public partial class MainPage : ContentPage
     {
+
         public MainPage()
         {
             InitializeComponent();
             
+        }
+        public interface PortableInterface
+        {
+            object GetLogicFromAndroidProject();
         }
         private async void NavigateButton_OnClicked(object sender, EventArgs e)
         {
