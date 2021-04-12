@@ -10,15 +10,19 @@
             <AbsoluteLayout>
                 <Button Text="Left" 
                         AbsoluteLayout.LayoutBounds="50,150, 150, 100 "
+                        ClassId="ButtonLeft"
                         />
                 <Button Text="Front" 
                         AbsoluteLayout.LayoutBounds="125,50, 150, 100 " 
-                        x:Name="Button1"/>
+                        ClassId="ButtonFront"/>
                 <Button Text="Right" 
-                        AbsoluteLayout.LayoutBounds="200,150, 150, 100 "/>
+                        AbsoluteLayout.LayoutBounds="200,150, 150, 100 "
+                        ClassId="ButtonRight"
+                        />
                 <Button Text="Down" 
                         AbsoluteLayout.LayoutBounds="125,250, 150, 100 "
-                        ClassId="buttonNRBeneden"/>
+                        ClassId="ButtonDown"
+                        />
             </AbsoluteLayout>
             
         </StackLayout>

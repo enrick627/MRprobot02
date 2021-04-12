@@ -11,6 +11,7 @@ using Android.Bluetooth;
 using System.Threading.Tasks;
 using static Android.Net.Sip.SipSession;
 using System.Linq;
+using Android.Content.PM;
 
 namespace MRprobot.Droid
 {
@@ -39,8 +40,9 @@ namespace MRprobot.Droid
 
             
             Button BleuthootConnect = FindViewById<Button>(Resource.Id.);
-            Button BleuthootDisconnect = FindViewById<Button>(Resource.Id.);fdfsfdf-
-            Button ButtonVooruit = FindViewById<Button>(Arm.ClassIdProperty);
+            Button BleuthootDisconnect = FindViewById<Button>(Arm.ClassIdProperty(ButtonUP));
+            Button ButtonOmhoog = FindViewById<Button>(Arm.ClassIdProperty(ButtonUP));
+            Button ButtonVooruit = FindViewById<Button>(Wielen.ClassIdProperty(ButtonFront));
             //Button ButtonAchteruit = FindViewById<Button>(Resource.Id.button4);
             //Button ButtonRechts = FindViewById<Button>(Resource.Id.button5);
            

@@ -20,5 +20,10 @@ namespace MRprobot
         {
             await Navigation.PushAsync(new MainPage());
         }
+
+        public static int ClassIdProperty(Arm buttonUP)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
