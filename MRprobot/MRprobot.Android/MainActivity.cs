@@ -39,7 +39,7 @@ namespace MRprobot.Droid
 
             
             Button BleuthootConnect = FindViewById<Button>(Resource.Id.);
-            Button BleuthootDisconnect = FindViewById<Button>(Resource.Id.);
+            Button BleuthootDisconnect = FindViewById<Button>(Resource.Id.);fdfsfdf-
             Button ButtonVooruit = FindViewById<Button>(Arm.ClassIdProperty);
             //Button ButtonAchteruit = FindViewById<Button>(Resource.Id.button4);
             //Button ButtonRechts = FindViewById<Button>(Resource.Id.button5);
