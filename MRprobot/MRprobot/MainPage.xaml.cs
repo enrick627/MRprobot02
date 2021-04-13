@@ -29,9 +29,9 @@ namespace MRprobot
         {
             await Navigation.PushAsync(new Wielen());
         }
-        private async void BleuthootConnect(object sender, EventArgs e)
+        private async void Bleuthootconnect(object sender, EventArgs e)
         {
-            
+            await Navigation.PushAsync(new Bleutooth());
         }
         public void ArmNaarBovenClick(object sender, EventArgs e)
         {

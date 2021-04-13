@@ -5,28 +5,27 @@
 
     <StackLayout>
         <Frame BackgroundColor="#ff2323" Padding="24" CornerRadius="0">
-            <Label Text="Welkom bij de app van MRProbot!" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+            <Label Text="Welkom bij de app vaan MRProbot!" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
         </Frame>
         <Button Text="Sturen" 
                 WidthRequest="200" HeightRequest="100"
                 VerticalOptions="CenterAndExpand"
                 HorizontalOptions="CenterAndExpand"
                 Clicked="NavigateButton_OnWielenClicked"
-                
                 />
+        <Button Text="Bleutooth" 
+                WidthRequest="200" HeightRequest="100"
+                VerticalOptions="CenterAndExpand"
+                HorizontalOptions="CenterAndExpand"
+                    Clicked="Bleuthootconnect"
+                    />
         <Button Text="Arm" 
                 WidthRequest="200" HeightRequest="100"
                 VerticalOptions="CenterAndExpand"
                 HorizontalOptions="CenterAndExpand"
                     Clicked="NavigateButton_OnClicked"
                     />
-        <Button Text="Bleutooth" 
-                WidthRequest="200" HeightRequest="100"
-                VerticalOptions="CenterAndExpand"
-                HorizontalOptions="CenterAndExpand"
-                    Clicked="NavigateButton_OnClicked"
-               
-                    />
+        
         
 
     </StackLayout>
