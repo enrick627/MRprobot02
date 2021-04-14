@@ -17,13 +17,13 @@
                 WidthRequest="200" HeightRequest="100"
                 VerticalOptions="CenterAndExpand"
                 HorizontalOptions="CenterAndExpand"
-                    Clicked="Bleuthootconnect"
+                Clicked="NavigateButton_OnBleutoothClicked"
                     />
         <Button Text="Arm" 
                 WidthRequest="200" HeightRequest="100"
                 VerticalOptions="CenterAndExpand"
                 HorizontalOptions="CenterAndExpand"
-                    Clicked="NavigateButton_OnClicked"
+                Clicked="NavigateButton_OnClicked"
                     />
         
         

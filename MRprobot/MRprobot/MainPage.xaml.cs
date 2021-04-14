@@ -29,7 +29,7 @@ namespace MRprobot
         {
             await Navigation.PushAsync(new Wielen());
         }
-        private async void Bleuthootconnect(object sender, EventArgs e)
+        private async void NavigateButton_OnBleutooth(object sender , EventArgs e)
         {
             await Navigation.PushAsync(new Bleutooth());
         }
