@@ -21,6 +21,7 @@
                  Clicked="ArmNaarBovenClick"
                  ClassId="ButtonUp"
                         />
+                
             </AbsoluteLayout>
            
         </StackLayout>
